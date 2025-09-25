@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Define custom colors as CSS variables */
+  :root {
+    --color-primary: #204020;   /* Chipotle Brown */
+    --color-secondary: #9e2a2f; /* Chipotle Red */
+    --color-accent: #f1c40f;    /* Chipotle Yellow */
+    --color-neutral-light: #f4f4f4; /* Light Gray */
+    --color-neutral-dark: #2c3e50;  /* Dark Gray */
+    --font-sans: 'Inter', sans-serif;
+  }
+
+  /* Apply the CSS variables */
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-neutral-light);
+    color: var(--color-neutral-dark);
+  }
+}
+
+/* Extend Tailwind utilities to use CSS variables */
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary) !important;
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary) !important;
+  }
+  .bg-accent {
+    background-color: var(--color-accent) !important;
+  }
+  .text-primary {
+    color: var(--color-primary) !important;
+  }
+  .text-secondary {
+    color: var(--color-secondary) !important;
+  }
+  .text-accent {
+    color: var(--color-accent) !important;
+  }
+  .text-neutral-light {
+    color: var(--color-neutral-light) !important;
+  }
+  .text-neutral-dark {
+    color: var(--color-neutral-dark) !important;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+
+/* Hide scrollbars for all browsers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
